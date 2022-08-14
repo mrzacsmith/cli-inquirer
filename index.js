@@ -1,5 +1,45 @@
 import inquirer from 'inquirer'
 
+// prompt for confirm
+// inquirer
+//   .prompt([
+//     {
+//       type: 'confirm',
+//       name: 'confirmation',
+//       message: 'do you wanted to confirm',
+//       default: false,
+//     },
+//   ])
+//   .then((answers) => console.info(`your answers: ${JSON.stringify(answers)}`))
+
+// prompt with expanded options
+// inquirer
+//   .prompt([
+//     {
+//       type: 'checkbox',
+//       name: 'contactSupport',
+//       message: 'What is your contact support?',
+//       default: 'by chat',
+//       choices: [
+//         {
+//           name: 'by email',
+//         },
+//         {
+//           name: 'by phone',
+//           checked: false,
+//         },
+//         {
+//           name: 'by agent',
+//           checked: true,
+//         },
+//         {
+//           name: 'have super call you',
+//         },
+//       ],
+//     },
+//   ])
+//   .then((answers) => console.info(`your answers: ${JSON.stringify(answers)}`))
+
 // prompt with expanded options
 // inquirer
 //   .prompt([
