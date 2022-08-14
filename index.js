@@ -1,16 +1,36 @@
 import inquirer from 'inquirer'
 
-// prompt with editor
+// prompt with password
+
+const requireLetterAndNumber = (value) => {
+  if (/\w/.test(value) && /\d/.test(value)) {
+    return true
+  }
+  return 'password needs to have at least one letter and one number'
+}
+
 inquirer
   .prompt([
     {
-      type: 'editor',
-      name: 'support',
-      message: 'What is your support?',
-      waitUserInput: true,
+      type: 'password',
+      name: 'enter a masked password',
+      name2: 'enter a masked password to confirm',
+      validate: requireLetterAndNumber,
     },
   ])
   .then((answers) => console.info(`your answers are${JSON.stringify(answers)}`))
+
+// prompt with editor
+// inquirer
+//   .prompt([
+//     {
+//       type: 'editor',
+//       name: 'support',
+//       message: 'What is your support?',
+//       waitUserInput: true,
+//     },
+//   ])
+//   .then((answers) => console.info(`your answers are${JSON.stringify(answers)}`))
 
 // prompt for confirm
 // inquirer
