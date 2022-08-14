@@ -1,5 +1,17 @@
 import inquirer from 'inquirer'
 
+// prompt with editor
+inquirer
+  .prompt([
+    {
+      type: 'editor',
+      name: 'support',
+      message: 'What is your support?',
+      waitUserInput: true,
+    },
+  ])
+  .then((answers) => console.info(`your answers are${JSON.stringify(answers)}`))
+
 // prompt for confirm
 // inquirer
 //   .prompt([
